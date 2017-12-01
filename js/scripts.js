@@ -6,10 +6,15 @@ $(document).ready(function(){
     var question3 = $("input:radio[name=question3]:checked").val();
     var result;
     if (question1 === "google" && question2 === "enterp" && question3 ==="moblie"){
-      $("#result").show();
+      $("#career").show();
+      $("#career1").hide();
+      $("#career2").hide();
 
     }else {
-      $("#career2").show();
+      $("#career1").show();
+      $("#career").hide();
+      $("#career2").hide();
+
     }
 
 
