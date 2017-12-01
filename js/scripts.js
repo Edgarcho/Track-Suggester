@@ -1,1 +1,6 @@
-alert(1);
+$(document).ready(function(){
+  $("form#quiz").submit(function(event){
+    event.preventDefault();
+    alert("Please try again.");
+  });
+});
