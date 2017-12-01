@@ -1,6 +1,18 @@
 body {
-  background-color: #457f8e;
+  background-color:#457f8e;
   color:white;
   font-size:20px;
   font-family: monospace;
+}
+.jumbotron{
+  font-size:30px;
+  color:black;
+  text-align: center;
+}
+.jumbotron h2{
+  font-size: 40px;
+  color:#0593ba;
+}
+#result{
+  display: none;
 }
