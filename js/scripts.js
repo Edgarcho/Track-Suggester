@@ -5,7 +5,7 @@ $(document).ready(function(){
     var question2 = $("input:radio[name=question2]:checked").val();
     var question3 = $("input:radio[name=question3]:checked").val();
     var answer1 = (question1+question2+question3);
-    if (answer1 ==="googleenterpmoblie" ){
+    if (answer1 ==="googleenterpmoblie"){
       $("#career").show();
       $("#career1").hide();
       $("#career2").hide();
@@ -21,6 +21,9 @@ $(document).ready(function(){
       $("#career2").hide();
       $("form#quiz").submit();
     }else {
+     $("#career1").hide();
+     $("#career").hide();
+     $("#career2").hide();
      $("form#quiz").submit();
     }
   });
