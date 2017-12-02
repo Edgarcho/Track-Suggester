@@ -20,6 +20,6 @@ body {
   padding:10px;
   background-color: blue;
 }
-#career1 a, #career2 {
+#career1 a, #career2 a{
   color:red;
 }
