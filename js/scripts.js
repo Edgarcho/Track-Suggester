@@ -1,30 +1,26 @@
 $(document).ready(function(){
   $("form#quiz").submit(function(event){
     event.preventDefault();
-    var question1 = $("input:radio[name=question1]:checked").val();
-    var question2 = $("input:radio[name=question2]:checked").val();
-    var question3 = $("input:radio[name=question3]:checked").val();
-    var answer1 = (question1+question2+question3);
-    if (answer1 ==="googleenterpmoblie"){
-      $("#career").show();
-      $("#career1").hide();
-      $("#career2").hide();
-      $("form#quiz").submit();
-    }else if (answer1 ==="microsoftbusinessdesktop"){
-      $("#career2").show();
-      $("#career").hide();
-      $("#career1").hide();
-      $("form#quiz").submit();
-    }else if (answer1 ==="newrelicstartweb"){
-      $("#career1").show();
-      $("#career").hide();
-      $("#career2").hide();
-      $("form#quiz").submit();
-    }else {
-     $("#career1").hide();
-     $("#career").hide();
-     $("#career2").hide();
-     $("form#quiz").submit();
+    var question1 = parseInt($("input:radio[name=question1]:checked").val());
+    var question2 = parseInt($("input:radio[name=question2]:checked").val());
+    var question3 = parseInt($("input:radio[name=question3]:checked").val());
+    var question4 = parseInt($("input:radio[name=question4]:checked").val());
+    var question5 = parseInt($("input:radio[name=question5]:checked").val());
+    var result = (question1+question2+question3+question4+question5);
+    if (result >= 30){
+      $("#cnet").hide();
+      $("#java").hide();
+      $("#ruby").show();
+    }else if (result >= 20){
+      $("#cnet").hide();
+      $("#ruby").hide();
+      $("#java").show();
+    }else if (result >= 5){
+      $("#ruby").hide();
+      $("#java").hide();
+      $("#cnet").show();
+    }else{
+     alert("Not so fast, anwser all the question");
     }
   });
 });
